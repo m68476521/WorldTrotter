@@ -15,6 +15,7 @@
 		60425CEA21D6B9F9001F7539 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60425CE921D6B9F9001F7539 /* WorldTrotterUITests.swift */; };
 		60425CFE21D9814D001F7539 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60425CFD21D9814D001F7539 /* ConversionViewController.swift */; };
 		60425D0121D9E779001F7539 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60425D0021D9E779001F7539 /* MapKit.framework */; };
+		60425D0321DD1A1B001F7539 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60425D0221DD1A1B001F7539 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		60425CEB21D6B9F9001F7539 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60425CFD21D9814D001F7539 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		60425D0021D9E779001F7539 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		60425D0221DD1A1B001F7539 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				60425CD221D6B9F8001F7539 /* LaunchScreen.storyboard */,
 				60425CD521D6B9F8001F7539 /* Info.plist */,
 				60425CFD21D9814D001F7539 /* ConversionViewController.swift */,
+				60425D0221DD1A1B001F7539 /* MapViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60425CFE21D9814D001F7539 /* ConversionViewController.swift in Sources */,
+				60425D0321DD1A1B001F7539 /* MapViewController.swift in Sources */,
 				60425CCA21D6B9F6001F7539 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
