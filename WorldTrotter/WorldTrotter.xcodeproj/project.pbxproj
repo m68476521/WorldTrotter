@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6040876B21E5C3DF0012E8AF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6040876A21E5C3DF0012E8AF /* WebViewController.swift */; };
 		60425CCA21D6B9F6001F7539 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60425CC921D6B9F6001F7539 /* AppDelegate.swift */; };
 		60425CCF21D6B9F6001F7539 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60425CCD21D6B9F6001F7539 /* Main.storyboard */; };
 		60425CD121D6B9F8001F7539 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60425CD021D6B9F8001F7539 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6040876A21E5C3DF0012E8AF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		60425CC621D6B9F6001F7539 /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60425CC921D6B9F6001F7539 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60425CCE21D6B9F6001F7539 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				60425CD521D6B9F8001F7539 /* Info.plist */,
 				60425CFD21D9814D001F7539 /* ConversionViewController.swift */,
 				60425D0221DD1A1B001F7539 /* MapViewController.swift */,
+				6040876A21E5C3DF0012E8AF /* WebViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				60425CFE21D9814D001F7539 /* ConversionViewController.swift in Sources */,
 				60425D0321DD1A1B001F7539 /* MapViewController.swift in Sources */,
 				60425CCA21D6B9F6001F7539 /* AppDelegate.swift in Sources */,
+				6040876B21E5C3DF0012E8AF /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
