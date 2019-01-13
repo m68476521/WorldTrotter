@@ -13,6 +13,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     var mapView: MKMapView!
     var locationManager: CLLocationManager!
+    //keeps track of current pin index:
+    var selectedAnnotationIndex: Int = -1
     
     override func loadView() {
         mapView = MKMapView()
@@ -41,7 +43,53 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true
         initLocalizatinButton(segmentedControl)
+        
+        //create array of location objects:
+        var locations = [Locations]()
+        locations.append(Locations(name: "New York City", lat: 40.730872, long: -74.003066))
+        locations.append(Locations(name: "London", lat: 51.5074, long: 0.1278))
+        locations.append(Locations(name: "Tokyo", lat: 35.6895, long: 139.6917))
+        
+        //drop location pins onto map:
+        for location in locations {
+            let dropPin = MKPointAnnotation()
+            dropPin.coordinate = CLLocationCoordinate2DMake(location.lat, location.long)
+            dropPin.title = location.name
+            mapView.addAnnotation(dropPin)
+        }
+        
+        //create button to toggle pins:
+        let pinButton = UIButton(type: .system)
+        pinButton.setTitle("Pins", for: .normal)
+        pinButton.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        pinButton.frame = CGRect(x: 0, y: 0, width: 100, height: 50)
+        pinButton.translatesAutoresizingMaskIntoConstraints = false
+        pinButton.addTarget(self, action: #selector(selectPin(_:)), for: .touchUpInside)
+        view.addSubview(pinButton)
+        pinButton.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor, constant: -8).isActive = true
+        pinButton.leftAnchor.constraint(equalTo: margins.leftAnchor).isActive = true
     }
+    
+    //function call when button is pressed:
+    @objc func selectPin(_ button: UIButton) {
+        
+        //data checks:
+        if !(mapView.annotations.count > 0) {
+            return
+        }
+        
+        //go to next annotation or back to start if last one:
+        selectedAnnotationIndex += 1
+        if selectedAnnotationIndex >= mapView.annotations.count {
+            selectedAnnotationIndex = 0
+        }
+        
+        //select pin and animate map:
+        let annotation = mapView.annotations[selectedAnnotationIndex]
+        let zoomedInCurrentLocation = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
+        mapView.setRegion(zoomedInCurrentLocation, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("MapViewController loaded its view")
@@ -85,3 +133,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.setRegion(zoomInCurrentLocation, animated: true)
     }
 }
+
+struct Locations {
+    var name: String
+    var lat: Double
+    var long: Double
+    
+    init(name: String, lat: Double, long: Double) {
+        self.name = name
+        self.lat = lat
+        self.long = long
+    }
+}
+
