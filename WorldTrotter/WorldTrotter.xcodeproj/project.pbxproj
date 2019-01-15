@@ -17,6 +17,7 @@
 		60425CFE21D9814D001F7539 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60425CFD21D9814D001F7539 /* ConversionViewController.swift */; };
 		60425D0121D9E779001F7539 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60425D0021D9E779001F7539 /* MapKit.framework */; };
 		60425D0321DD1A1B001F7539 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60425D0221DD1A1B001F7539 /* MapViewController.swift */; };
+		6077F4BA21EDB62500C05AD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6077F4BC21EDB62500C05AD9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		60425CFD21D9814D001F7539 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		60425D0021D9E779001F7539 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		60425D0221DD1A1B001F7539 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6077F4BB21EDB62500C05AD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6077F4BD21EDB63700C05AD9 /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 				60425CD521D6B9F8001F7539 /* Info.plist */,
 				60425CFD21D9814D001F7539 /* ConversionViewController.swift */,
 				60425D0221DD1A1B001F7539 /* MapViewController.swift */,
+				6077F4BC21EDB62500C05AD9 /* Localizable.strings */,
 				6040876A21E5C3DF0012E8AF /* WebViewController.swift */,
 			);
 			path = WorldTrotter;
@@ -231,6 +235,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 60425CBD21D6B9F6001F7539;
 			productRefGroup = 60425CC721D6B9F6001F7539 /* Products */;
@@ -250,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60425CD421D6B9F8001F7539 /* LaunchScreen.storyboard in Resources */,
+				6077F4BA21EDB62500C05AD9 /* Localizable.strings in Resources */,
 				60425CD121D6B9F8001F7539 /* Assets.xcassets in Resources */,
 				60425CCF21D6B9F6001F7539 /* Main.storyboard in Resources */,
 			);
@@ -331,6 +337,15 @@
 				60425CD321D6B9F8001F7539 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6077F4BC21EDB62500C05AD9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6077F4BB21EDB62500C05AD9 /* en */,
+				6077F4BD21EDB63700C05AD9 /* es-419 */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
